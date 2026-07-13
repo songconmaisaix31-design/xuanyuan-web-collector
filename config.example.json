@@ -1,0 +1,382 @@
+{
+  "project": {
+    "name": "xianghe-realtime-report",
+    "city_name": "香河县",
+    "timezone": "Asia/Shanghai"
+  },
+  "paths": {
+    "root": "D:/AI-Workspace/Projects/xuanyuan-web-collector",
+    "template_xlsx": "C:/Users/DW/Desktop/香河实时播报.xlsx",
+    "output_dir": "D:/AI-Workspace/Projects/xuanyuan-web-collector/outputs/xuanyuan-template",
+    "history_dir": "D:/AI-Workspace/Projects/xuanyuan-web-collector/history",
+    "web_data": "D:/AI-Workspace/Projects/xuanyuan-web-collector/xlsx_work/mapped_data.json",
+    "adb_data": "D:/AI-Workspace/Projects/xuanyuan-web-collector/output/adb_data.json",
+    "quality_report": "D:/AI-Workspace/Projects/xuanyuan-web-collector/output/quality_report.json",
+    "workflow_summary": "D:/AI-Workspace/Projects/xuanyuan-web-collector/output/workflow_summary.json"
+  },
+  "web": {
+    "source_url": "https://xy.ele.me/cddp",
+    "business_frame_keyword": "dm-area-data-board",
+    "logistics_ontime_label": "用户T准时率（通用）"
+  },
+  "excel": {
+    "output_basename": "香河实时播报-已填",
+    "transaction_target": 466980,
+    "order_target": 12165,
+    "date_cell": "B1",
+    "ranges": {
+      "trade": "B3:E10",
+      "subsidy": "B11:E15",
+      "logistics": "B17:E28"
+    }
+  },
+  "adb": {
+    "source": "mumu",
+    "connect_serials": [
+      "127.0.0.1:7555",
+      "127.0.0.1:16416"
+    ],
+    "preferred_serials": [
+      "127.0.0.1:7555",
+      "127.0.0.1:16416",
+      "emulator-5556",
+      "emulator-5554"
+    ],
+    "require_mumu": true
+  },
+  "progress_curve": [
+    [
+      0,
+      0.0
+    ],
+    [
+      0.5,
+      0.0019
+    ],
+    [
+      2.0,
+      0.0093
+    ],
+    [
+      3.5,
+      0.0115
+    ],
+    [
+      5.0,
+      0.0118
+    ],
+    [
+      6.5,
+      0.0143
+    ],
+    [
+      8.0,
+      0.0276
+    ],
+    [
+      9.5,
+      0.0616
+    ],
+    [
+      10.0,
+      0.0781
+    ],
+    [
+      10.5,
+      0.0975
+    ],
+    [
+      11.0,
+      0.129
+    ],
+    [
+      11.5,
+      0.1859
+    ],
+    [
+      12.0,
+      0.26
+    ],
+    [
+      12.5,
+      0.3285
+    ],
+    [
+      13.0,
+      0.381
+    ],
+    [
+      13.5,
+      0.4202
+    ],
+    [
+      14.0,
+      0.4529
+    ],
+    [
+      14.5,
+      0.4821
+    ],
+    [
+      15.5,
+      0.5324
+    ],
+    [
+      17.0,
+      0.5996
+    ],
+    [
+      17.5,
+      0.6256
+    ],
+    [
+      18.0,
+      0.6587
+    ],
+    [
+      18.5,
+      0.6991
+    ],
+    [
+      19.0,
+      0.746
+    ],
+    [
+      19.5,
+      0.793
+    ],
+    [
+      20.0,
+      0.8372
+    ],
+    [
+      20.5,
+      0.8795
+    ],
+    [
+      21.0,
+      0.9157
+    ],
+    [
+      21.5,
+      0.9434
+    ],
+    [
+      22.0,
+      0.9638
+    ],
+    [
+      22.5,
+      0.9787
+    ],
+    [
+      23.0,
+      0.9887
+    ],
+    [
+      23.5,
+      0.9953
+    ],
+    [
+      24.0,
+      1.0
+    ]
+  ],
+  "estimate": {
+    "conservative_factor": 1.08,
+    "floor_curve": [
+      [
+        0,
+        0.0
+      ],
+      [
+        6.5,
+        0.02
+      ],
+      [
+        8.0,
+        0.06
+      ],
+      [
+        9.5,
+        0.12
+      ],
+      [
+        11.0,
+        0.25
+      ],
+      [
+        11.5,
+        0.34
+      ],
+      [
+        12.5,
+        0.45
+      ],
+      [
+        14.0,
+        0.55
+      ],
+      [
+        15.5,
+        0.62
+      ],
+      [
+        17.0,
+        0.68
+      ],
+      [
+        18.5,
+        0.78
+      ],
+      [
+        20.0,
+        0.88
+      ],
+      [
+        21.5,
+        0.95
+      ],
+      [
+        23.0,
+        0.99
+      ],
+      [
+        24.0,
+        1.0
+      ]
+    ]
+  },
+  "compare": {
+    "jump_ratio": 1.0,
+    "rate_drop_pt": 0.1,
+    "avg_t_jump_ratio": 0.5,
+    "subsidy_jump_pt": 5.0
+  },
+  "dingtalk": {
+    "enabled_by_default": false,
+    "require_quality_status": "passed",
+    "message_title": "香河实时播报",
+    "webhook_url": "",
+    "webhook_secret": "",
+    "send_mode": "webhook"
+  },
+  "r2": {
+    "enabled": true,
+    "account_id_env": "CLOUDFLARE_R2_ACCOUNT_ID",
+    "access_key_id_env": "",
+    "secret_access_key_env": "",
+    "bucket_env": "CLOUDFLARE_R2_BUCKET",
+    "public_base_url_env": "CLOUDFLARE_R2_PUBLIC_BASE_URL",
+    "key_prefix": "xianghe-realtime-report"
+  },
+  "vercel_blob": {
+    "enabled": true,
+    "upload_server_url": "https://vercel-blob-url-server.vercel.app",
+    "upload_token_env": "",
+    "env_file": "C:/Users/DW/Documents/vercel blob/.env.local"
+  },
+  "presentation": {
+    "render_range": "B1:E39",
+    "title": "香河实时播报",
+    "alerts": {
+      "avg_predicted_t_gt": 30,
+      "delivery_rate_lt": 0.98,
+      "ontime_rate_lt": 0.9,
+      "font_color": "#DC2626"
+    },
+    "colors": {
+      "title_fill": "#1F2937",
+      "section_fill": "#374151",
+      "header_fill": "#C75A11",
+      "header_font": "#FFFFFF",
+      "body_font": "#111827",
+      "muted_font": "#6B7280",
+      "border": "#D1D5DB",
+      "panel_fill": "#FFFFFF"
+    }
+  },
+  "checks": {
+    "max_data_age_minutes": 30,
+    "required_sources": [
+      "web",
+      "adb"
+    ],
+    "required_metrics": [
+      "transaction_amount",
+      "transaction_amount_day",
+      "transaction_amount_week",
+      "transaction_target",
+      "transaction_completion",
+      "effective_orders",
+      "effective_orders_day",
+      "effective_orders_week",
+      "agent_subsidy",
+      "agent_subsidy_day",
+      "agent_subsidy_week",
+      "merchant_subsidy",
+      "merchant_subsidy_day",
+      "merchant_subsidy_week",
+      "platform_subsidy",
+      "platform_subsidy_day",
+      "platform_subsidy_week",
+      "attendance",
+      "attendance_day",
+      "attendance_week",
+      "working_riders",
+      "working_riders_day",
+      "working_riders_week",
+      "rider_load",
+      "rider_load_day",
+      "rider_load_week",
+      "avg_predicted_t",
+      "avg_predicted_t_day",
+      "avg_predicted_t_week",
+      "delivery_rate",
+      "delivery_rate_day",
+      "delivery_rate_week",
+      "ontime_rate",
+      "ontime_rate_day",
+      "ontime_rate_week"
+    ],
+    "ranges": {
+      "transaction_amount": [
+        0,
+        2000000
+      ],
+      "effective_orders": [
+        0,
+        60000
+      ],
+      "attendance": [
+        0,
+        5000
+      ],
+      "rider_load": [
+        0,
+        5
+      ],
+      "avg_t": [
+        0,
+        120
+      ],
+      "rate": [
+        0,
+        1.5
+      ],
+      "delta_rate": [
+        -2,
+        2
+      ],
+      "subsidy_pt": [
+        -100,
+        100
+      ]
+    },
+    "cross_checks": {
+      "min_transaction_amount_per_order": 5,
+      "max_transaction_amount_per_order": 200,
+      "warn_if_web_orders_differs_from_adb_orders_by_ratio": 0.35
+    }
+  }
+}
